@@ -21,7 +21,7 @@ export class LiveService {
   getUsers():Observable<any>{
     return this.http.get<any>(this.userLink)
   } 
-   getRepos():Observable<any>{
+   getRepos(): Observable<any>{
      return this.http.get<any>(this.repoLink)
    }
 }
