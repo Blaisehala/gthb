@@ -7,18 +7,18 @@ import { lastValueFrom, Observable } from "rxjs";
 })
 export class LiveService {
 
-  userName = 'Blaisehala'
+  // userName = 'Blaisehala'
  
 
   propLink ='https://api.github.com'
 
   async getUsers(userName:string){
-    const papa = this.http.get<any>(`${this.propLink}/users/${this.userName}`)
+    const papa = this.http.get<any>(`${this.propLink}/users/${userName}`)
      return await lastValueFrom (papa).then((response)=>response)
    } 
  
  getRepo(userName:string):Observable<any>{
-   return this.http.get<any>(`${this.propLink}/users/${this.userName}/repos`)
+   return this.http.get<any>(`${this.propLink}/users/${userName}/repos`)
  }
   constructor(private http: HttpClient) { } 
  
