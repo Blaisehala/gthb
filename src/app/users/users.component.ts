@@ -13,17 +13,26 @@ user!:any;
 repo!:any;
   constructor(private liveService:LiveService ) { }
 
-  repoFetch(userName:string){
+  repoFetch(userName:string):void{
     this.liveService.getRepo(userName).subscribe((repo)=>{
       this.repo=repo
       console.log(repo);
     })
   }
+  
+  userFetch(userName:string):void{
+    this.liveService.getUsers(userName).then((data)=>(this.user=data))
+      
+    
+    
 
+      
+  }
   
 
   ngOnInit(): void {
     this.repoFetch(this.userName)
+    this.userFetch(this.userName)
   //     this.liveService.getUsers().subscribe(
   //       data => 
   //       {this.user =data
