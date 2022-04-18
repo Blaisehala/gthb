@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { LiveService } from '../live.service';
 
 @Component({
   selector: 'app-searchform',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchformComponent implements OnInit {
 
-  constructor() { }
+
+  @Output() newUserName= new EventEmitter ()
+  userName:string = ""
+  submitForm(userName:string){
+    this.newUserName.emit(userName)
+
+  }
+  constructor( private  liveService:LiveService) {
+
+   }
 
   ngOnInit(): void {
   }
