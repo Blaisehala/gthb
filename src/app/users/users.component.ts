@@ -12,7 +12,9 @@ user!:any;
 
   ngOnInit(): void {
       this.liveService.getUsers().subscribe(
-        data => this.user =data
+        data => 
+        {this.user =data
+        console.log(this.user);}
       )
   }
 

@@ -7,21 +7,15 @@ import { Observable } from "rxjs";
   providedIn: 'root'
 })
 export class LiveService {
-  getUser() {
-    throw new Error ('Method not immplmented');
-  }
+  user = 'Blaisehala'
+ 
 
-  propLink = " https://api.github.com/ "
+  propLink =  `https://api.github.com/users/${this.user}`
 
-  user = 'Maltilda Nyaboke';
-  userLink:string= `https://api.github.com/users${this.user}`
-  repoLink:string=  `https://api.github.com/users/${this.user}/repos`
-  
+ 
   constructor(private http: HttpClient) { } 
   getUsers():Observable<any>{
-    return this.http.get<any>(this.userLink)
+    return this.http.get<any>(this.propLink)
   } 
-   getRepos(): Observable<any>{
-     return this.http.get<any>(this.repoLink)
-   }
+
 }
