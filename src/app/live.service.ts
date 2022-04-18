@@ -13,11 +13,14 @@ export class LiveService {
 
  
   constructor(private http: HttpClient) { } 
- async getUsers(){
+ async getUsers(userName:string){
    const papa = this.http.get<any>(`${this.propLink}/users/${this.userName}`)
     return await lastValueFrom (papa).then((response)=>response)
   } 
 
+getRepo(userName:string):Observable<any>{
+  return this.http.get<any>(`${this.propLink}/users/${this.userName}/repos`)
+}
 }
 
 
