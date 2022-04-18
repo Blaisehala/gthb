@@ -21,14 +21,19 @@ repo!:any;
   }
   
   userFetch(userName:string):void{
-    this.liveService.getUsers(userName).then((data)=>(this.user=data))
-      
+    this.liveService.getUsers(userName).then((user)=>(this.user=user))
+
+     console.log();
+
     
     
 
       
   }
   
+ 
+
+
 
   ngOnInit(): void {
     this.repoFetch(this.userName)

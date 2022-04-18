@@ -7,3 +7,10 @@
   <p>Repos:{{user.public_repos}}</p>
   <a href="{{user.html_url}}"><button class="btn-info">View on Github</button></a>
 </div>
+<div>
+  <ul *ngFor="let repo of repo">
+    <li>{{repo.name}}</li>
+    <p>{{repo.description}}</p>
+    <p>{{repo.created_at|date}} </p>
+  </ul>
+</div>

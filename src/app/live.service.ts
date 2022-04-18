@@ -10,7 +10,7 @@ export class LiveService {
   userName = 'Blaisehala'
  
 
-  propLink ='https://api.github.com/'
+  propLink ='https://api.github.com'
 
   async getUsers(userName:string){
     const papa = this.http.get<any>(`${this.propLink}/users/${this.userName}`)
