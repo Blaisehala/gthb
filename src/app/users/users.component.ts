@@ -12,6 +12,25 @@ export class UsersComponent implements OnInit {
 user!:any;
 repo!:any;
   constructor(private liveService:LiveService ) { }
+  getData(newUserName:any):void{
+    this.userName = newUserName
+
+    this.repoFetch=(newUserName)
+    this.userFetch=(newUserName)
+
+    this.liveService.getRepo(this.userName).subscribe((repo)=>{
+      this.repo=repo
+      console.log(repo);
+    })
+    
+
+    this.liveService.getUsers(this.userName).then((user)=>(this.user=user))
+
+     console.log(newUserName);
+
+  }
+
+
 
   repoFetch(userName:string):void{
     this.liveService.getRepo(userName).subscribe((repo)=>{
