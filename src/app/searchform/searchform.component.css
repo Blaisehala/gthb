@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Montserrat&family=Open+Sans:ital,wght@1,300&family=Rowdies&display=swap');
 
 .container{
   background-image:url();
@@ -16,5 +16,9 @@ img{
 }
 
 
-
+h1{
+  font-family: 'Fredoka One', cursive;
+  color:  #3a3a3b;
+  text-shadow: 1px 1px #faf6f6;
+}
 

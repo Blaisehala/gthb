@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Montserrat&family=Open+Sans:ital,wght@1,300&family=Rowdies&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Montserrat&family=Open+Sans:ital,wght@1,300&family=Quicksand:wght@300&family=Rowdies&display=swap');
+
+
 .container{
   width: 80vw;
+  font-family:  'Fredoka One', cursive;
 }
 
 .card-body{
@@ -9,4 +15,19 @@
 img{
   border-radius: 50%;
   height:100px;
+}
+
+p{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.repoz{
+  text-decoration: none;
+  font-size: 30px;
+  color: rgb(104, 104, 92);
+}
+
+.name{
+  color: #000;
+  text-shadow: 1px 1px #faf6f6;
 }
