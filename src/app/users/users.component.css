@@ -28,6 +28,6 @@ p{
 }
 
 .name{
-  color: #000;
-  text-shadow: 1px 1px #faf6f6;
+  color: rgb(34, 34, 34);
+  text-shadow: 1px 1px #e2e2e2;
 }
