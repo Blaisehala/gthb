@@ -8,7 +8,7 @@ import { LiveService } from '../live.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  userName = 'Blaisehala'
+  userName = ''
 user!:any;
 repo!:any;
   constructor(private liveService:LiveService ) { }

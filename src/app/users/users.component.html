@@ -1,20 +1,53 @@
+<app-searchform (newUserName)="getData($event)"></app-searchform>
 
 
- <app-searchform (newUserName)="getData($event)"></app-searchform>
-<div class="container text-center" *ngIf="user">
- 
-  <h1>{{user.login}}</h1>
-  <img src="{{user.avatar_url}}" alt="" >
-  <p>Bio:{{user.bio}}</p>
-  <p>followers: {{user.followers}}</p>
-  <p>Following: {{user.following}}</p>
-  <p>  Repos:{{user.public_repos}}</p>
-  <a href="{{user.html_url}}"><button class="btn-info">View on Github</button></a>
-</div>
-<div>
-  <ul *ngFor="let repo of repo">
-    <li><a href="{{repo.html_url}}"> {{repo.name}}  </a></li>
-    <p>{{repo.description}}</p>
-    <p>{{repo.created_at|date}} </p>
-  </ul>
+
+
+<div class="container text-center" *ngIf="user"  id="kode">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>{{user.login}}</h1>
+      <img src="{{user.avatar_url}}" alt=""[style]="">
+
+      <div class="">
+        <!-- <p>Location:{{user.location}}</p> -->
+        <!-- <p>Bio:{{user.bio}}</p> -->
+        <p appOpts>Date Joined: <strong>{{user.created_at|date}}</strong></p>
+        <p appOpts>Last Update: <strong>{{user.updated_at|date}}</strong></p>
+        <p appOpts> Repos:<strong>{{user.public_repos}}</strong></p>
+      </div>
+
+      <a target="blank" href=" {{user.html_url}}"><button class="btn-info">View on Github</button></a>
+    </div>
+
+
+    <div class="col-md-6">
+      <h1>Repositories</h1>
+      <hr>
+      <div *ngFor="let repo of repo">
+
+        <div class="card d-flex flex-column">
+          <div class="card-body  ">
+
+            <a href="{{repo.html_url}}"> {{repo.name}} </a>
+            <p>{{repo.description}}</p>
+            <p>{{repo.created_at|date}} </p>
+            <p>{{repo.language}}</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
 </div>

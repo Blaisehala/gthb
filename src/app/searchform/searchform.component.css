@@ -1,0 +1,20 @@
+
+
+.container{
+  background-image:url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:60vh;
+  position:relative;
+  top:30%;
+  /* width: 50vw; */
+  /* background-color: blue; */
+}
+
+img{
+  border-radius: 70%;
+}
+
+
+
+

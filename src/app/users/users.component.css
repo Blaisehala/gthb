@@ -1,3 +1,12 @@
 .container{
   width: 80vw;
 }
+
+.card-body{
+  background-color: transparent;
+}
+
+img{
+  border-radius: 50%;
+  height:100px;
+}

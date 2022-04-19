@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { SearchformComponent } from './searchform/searchform.component';
+import { OptsDirective } from './opts.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    SearchformComponent
+    SearchformComponent,
+    OptsDirective,
+
   ],
   imports: [
     BrowserModule,
