@@ -8,10 +8,10 @@
 The Github Search Web App is a simple Angular App that uses the Github API to fetch user data. Upon entering the user data in the search bar, the User Github  data showing the profile and repositories is fetched and presented.
 
 ## Live Link
-
+https://blaisehala.github.io/gthb/
 ## Installation/Setup instruction
 * Open Terminal
-* [Git Clone]()  
+* [Git Clone](https://blaisehala.github.io/gthb/)  
 * cd into the cloned 
 * code . or atom .  etc     based on the text editor you have
 
